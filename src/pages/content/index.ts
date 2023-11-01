@@ -1,6 +1,6 @@
 try {
-  chrome.storage.local.get({ isActive: true }, (result) => {
-    if (!result.isActive) {
+  chrome.storage.local.get({ isActive: false }, (result) => {
+    if (!result || !result.isActive) {
       console.log('Wikifirst: Wikifirst is inactive');
       return;
     }
