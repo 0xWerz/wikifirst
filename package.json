@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "vite build",
+    "build-zip": "vite build && node pack.js",
     "dev": "nodemon"
   },
   "type": "module",
@@ -20,6 +21,7 @@
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.3",
     "@types/chrome": "^0.0.237",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
@@ -28,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-react-swc": "^3.0.1",
+    "adm-zip": "^0.5.10",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",

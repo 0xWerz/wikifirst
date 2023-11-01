@@ -19,6 +19,9 @@ dependencies:
     version: 0.10.0
 
 devDependencies:
+  '@types/adm-zip':
+    specifier: ^0.5.3
+    version: 0.5.3
   '@types/chrome':
     specifier: ^0.0.237
     version: 0.0.237
@@ -43,6 +46,9 @@ devDependencies:
   '@vitejs/plugin-react-swc':
     specifier: ^3.0.1
     version: 3.0.1(vite@4.0.4)
+  adm-zip:
+    specifier: ^0.5.10
+    version: 0.5.10
   autoprefixer:
     specifier: ^10.4.13
     version: 10.4.13(postcss@8.4.21)
@@ -496,6 +502,12 @@ packages:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
     dev: true
 
+  /@types/adm-zip@0.5.3:
+    resolution: {integrity: sha512-LfeDIiFdvphelYY2aMWTyQBr5cTb1EL9Qcu19jFizdt2sL/jL+fy1fE8IgAKBFI5XfbGukaRDDM5PiJTrovAhA==}
+    dependencies:
+      '@types/node': 18.11.18
+    dev: true
+
   /@types/chrome@0.0.237:
     resolution: {integrity: sha512-krsRmyfMlck5r+H1EapsrrucDRq6iRm0NAi5fapr93CgnpVMDdK+h2+z4x79GegdW7BNH9Vb//gkptORwwwVIQ==}
     dependencies:
@@ -738,6 +750,11 @@ packages:
     resolution: {integrity: sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+    dev: true
+
+  /adm-zip@0.5.10:
+    resolution: {integrity: sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==}
+    engines: {node: '>=6.0'}
     dev: true
 
   /ajv@6.12.6:
