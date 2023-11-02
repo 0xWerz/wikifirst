@@ -25,14 +25,13 @@ jobs:
         run: npm install
         
       - name: Build and Pack extension
-        run: npm run build-zip
+        run: npm run build-zip; mv chrome-extension.zip dist/extension.zip
 
-      - name: Unzip extension
-        run: unzip -qq ../chrome-extension.zip -d chrome-extension
-        working-directory: ${{ github.workspace }}
-        
-      - name: Upload for Chromium
-        uses: actions/upload-artifact@v3.1.2
+      - name: Create or Update Github Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: chrome-extension
-          path: ${{ github.workspace }}/chrome-extension
+          files: ./dist/extension.zip
+          tag_name: ${{ github.ref }}
+          body: ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: false

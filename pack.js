@@ -11,9 +11,3 @@ const distFolder = path.join(__dirname, 'dist');
 zip.addLocalFolder(distFolder);
 zip.writeZip(path.join(__dirname, 'chrome-extension.zip'));
 console.log('PACK: Extension packed');
-fs.rm(distFolder, { recursive: true }, (err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('PACK: dist folder removed');
-});
