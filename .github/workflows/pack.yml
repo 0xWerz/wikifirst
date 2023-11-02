@@ -30,10 +30,11 @@ jobs:
         run: npm run build-zip; mv chrome-extension.zip dist/extension.zip
 
       - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
         with:
           files: ./dist/extension.zip
-          tag_name: ${{ github.ref }}
+          tag_name: ${{ github.ref#refs/tags/ }}
           body: ${{ github.event.head_commit.message }}
           draft: false
           prerelease: false
