@@ -23,6 +23,7 @@ const manifest: Manifest.WebExtensionManifest = {
       matches: ['https://www.google.com/search?q=*'],
       js: ['src/pages/content/index.js'],
       css: ['contentStyle.css'],
+      run_at: 'document_start',
     },
   ],
   devtools_page: 'src/pages/devtools/index.html',
