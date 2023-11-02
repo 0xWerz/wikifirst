@@ -1,11 +1,11 @@
 name: Pack Extension
+permissions: write-all
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ] 
-
 jobs:
   build:
 
