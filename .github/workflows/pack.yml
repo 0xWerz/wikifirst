@@ -1,0 +1,38 @@
+name: Pack Extension
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ] 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Tree
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+
+      - name: Install ZIP
+        uses: montudor/action-zip@v1
+        
+      - name: Setup NPM packages
+        run: npm install
+        
+      - name: Build and Pack extension
+        run: npm run build-zip
+
+      - name: Unzip extension
+        run: unzip -qq ../chrome-extension.zip -d chrome-extension
+        working-directory: ${{ github.workspace }}
+        
+      - name: Upload for Chromium
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: chrome-extension
+          path: ${{ github.workspace }}/chrome-extension
