@@ -1,7 +1,7 @@
 {
   "name": "wikifirst",
   "displayName": "Wikifirst",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Wikifirst prioritizes Wikipedia pages in your Google search results.",
   "license": "MIT",
   "repository": {
