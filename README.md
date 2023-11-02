@@ -2,6 +2,10 @@
 
 For the reliability of the world informations Wikifirst is a Chrome extension that prioritizes Wikipedia in Google search results rankings. It helps users find *reliable* informations quickly and easily.
 
+| With Wikifirst | Without Wikifirst |
+| --- | --- |
+| <img src="./assets/with-wikifirst.png" alt="Screenshot of the extension" width="400px"> | <img src="./assets/without-wikifirst.png" alt="Screenshot of the extension" width="400px"> |
+
 ## Installation
 
 To install Wikifirst, follow these steps:
